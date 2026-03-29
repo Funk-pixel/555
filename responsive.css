@@ -1,0 +1,108 @@
+/* Налаштування для екранів 1024px і менше */
+@media (max-width: 1024px) {
+    
+    /* 1. Гнучкість шапки на всіх сторінках */
+    .header-flex, .header-top, .header__inner, .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Ховаємо всі види навігації (для всіх сторінок) */
+    .main-nav, 
+    .nav, 
+    .navigation, 
+    .nav-menu-container {
+        display: none !important;
+        width: 100% !important;
+        background-color: #fff !important;
+        order: 10 !important; /* Меню падає під логотип */
+        border-top: 1px solid #ddd !important;
+        margin-top: 10px !important;
+    }
+
+    /* 3. Кнопка-бургер (три лінії) */
+    .mobile-menu-btn {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 28px !important;
+        height: 20px !important;
+        cursor: pointer !important;
+        margin: 10px 0 !important;
+    }
+
+    .mobile-menu-btn span {
+        display: block !important;
+        height: 3px !important;
+        width: 100% !important;
+        background-color: #4CAF50 !important;
+        border-radius: 2px !important;
+    }
+
+    /* 4. ГОЛОВНА ЛОГІКА: Показуємо меню при натисканні (чекбокс активований) */
+    #menu-toggle:checked ~ .main-nav,
+    #menu-toggle:checked ~ .nav,
+    #menu-toggle:checked ~ .navigation,
+    #menu-toggle:checked ~ .nav-menu-container {
+        display: block !important;
+    }
+
+    /* 5. Стилізація списків всередині меню */
+    .main-nav ul, .navigation ul, .nav-menu {
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        list-style: none !important;
+    }
+
+    .main-nav ul li, .navigation ul li, .nav-menu li, .nav a {
+        width: 100% !important;
+        text-align: center !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    .main-nav ul li a, .navigation ul li a, .nav-menu li a, .nav a {
+        display: block !important;
+        padding: 15px !important;
+        font-size: 16px !important;
+        color: #333 !important;
+        text-decoration: none !important;
+        font-weight: bold !important;
+    }
+
+    /* 6. Адаптація контенту (сітки томатів та карток) */
+    .hybrids-grid, .activity-grid, .product-flex {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+    }
+
+    .hybrid-item, .card {
+        width: 45% !important; /* По 2 в ряд на планшетах */
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Налаштування для телефонів */
+@media (max-width: 480px) {
+    .hybrid-item, .card {
+        width: 100% !important; /* По 1 в ряд на малих екранах */
+    }
+
+    .logo, .main-logo, .logo-small {
+        max-width: 140px !important;
+    }
+}

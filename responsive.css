@@ -1,0 +1,68 @@
+/* Приховуємо сам чекбокс завжди */
+.menu-checkbox {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    /* Стиль кнопки-бургера */
+    .mobile-menu-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin: 10px 0 10px auto;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #4CAF50;
+        border-radius: 3px;
+    }
+
+    /* Ховаємо меню за замовчуванням */
+    .main-nav {
+        display: none;
+        width: 100%;
+        background-color: #ffffff;
+        border-top: 1px solid #ddd;
+    }
+
+    /* МАГІЯ: Якщо чекбокс натиснутий — показуємо меню */
+    .menu-checkbox:checked ~ .main-nav {
+        display: block !important;
+    }
+
+    /* Вертикальне меню для мобільних */
+    .main-nav ul {
+        flex-direction: column !important;
+        padding: 0;
+    }
+
+    .main-nav ul li {
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 15px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    /* Щоб шапка не розвалювалася */
+    .header-flex {
+        flex-wrap: wrap;
+    }
+}
+
+/* На комп'ютері кнопку ховаємо */
+@media (min-width: 1025px) {
+    .mobile-menu-btn {
+        display: none;
+    }
+}

@@ -1,0 +1,56 @@
+/* Адаптація для планшетів та смартфонів (1024px і менше) */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%; /* Додаємо невеликі відступи по боках  */
+        padding: 0 10px;
+    }
+
+    /* Приховуємо десктопне меню, готуємо місце для мобільного [cite: 26] */
+    .main-nav {
+        display: none; 
+    }
+
+    /* Робимо шапку вертикальною, як на макеті [cite: 26] */
+    .header-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Сітка стає в одну колонку  */
+    .activity-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px; /* Обмежуємо ширину картки для мобільних  */
+        margin-bottom: 20px;
+    }
+
+    /* Адаптуємо зображення */
+    .full-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Специфічні налаштування для телефонів (480px і менше) [cite: 25] */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px; /* Зменшуємо заголовки для малих екранів  */
+    }
+
+    .hero-content {
+        padding: 20px 10px;
+    }
+
+    /* Футер у стовпчик  */
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

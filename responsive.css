@@ -1,0 +1,70 @@
+/* Адаптація для планшетів та смартфонів */
+@media (max-width: 1024px) {
+    /* 1. Скидаємо фіксовану ширину контейнера */
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. Шапка: логотип і меню стають один під одним */
+    .header-flex {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .header-right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 3. Приховуємо десктопне меню (згідно з завданням для 1024px) */
+    .main-nav {
+        display: none !important;
+    }
+
+    /* 4. Секція Activities: картки стають в один стовпчик */
+    .activity-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .card {
+        width: 100% !important;
+        max-width: 320px;
+        margin-bottom: 30px;
+    }
+
+    /* 5. Картинки: робимо їх гумовими */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .full-img {
+        width: 100% !important;
+    }
+
+    /* 6. Футер: посилання стають в стовпчик */
+    .footer-nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Додатково для маленьких телефонів */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 20px !important;
+    }
+    
+    .btn-read-more {
+        display: inline-block;
+        padding: 10px 20px;
+    }
+}

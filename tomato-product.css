@@ -1,0 +1,97 @@
+/* Базові стилі */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Arial', sans-serif; color: #333; line-height: 1.4; background: #fff; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Хедер з тінню */
+.site-header { 
+    background: #ffffff; 
+    padding: 15px 0; 
+    position: relative; 
+    z-index: 100; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); 
+}
+.header-top { display: flex; justify-content: space-between; align-items: flex-end; }
+.main-logo { height: 75px; }
+.search-box { border-bottom: 1px solid #999; display: inline-flex; align-items: center; margin-bottom: 12px; }
+.search-box input { border: none; outline: none; padding: 5px; width: 180px; background: transparent; }
+.search-btn { background: none; border: none; cursor: pointer; }
+.navigation ul { list-style: none; display: flex; gap: 20px; border-top: 1px solid #eee; padding-top: 10px; }
+.navigation a { text-decoration: none; color: #333; font-weight: bold; font-size: 13px; transition: 0.3s; }
+.navigation a:hover { color: #72a550; }
+
+/* Фон та Водяний знак */
+.product-page { 
+    position: relative; 
+    background-color: #e6e6e6; /* Сіріший фон для видимості знака */
+    padding: 40px 0 120px; 
+    overflow: hidden; 
+}
+.watermark-bg {
+    position: absolute;
+    top: 50%; left: 55%;
+    transform: translate(-50%, -50%);
+    width: 80%; z-index: 1; 
+    opacity: 0.35; pointer-events: none;
+}
+.watermark-bg img { width: 100%; height: auto; }
+.content-inner { position: relative; z-index: 10; }
+
+/* Кнопка повернення (Зелена) */
+.back-link { 
+    color: #72a550; 
+    text-decoration: none; 
+    font-size: 14px; 
+    font-weight: bold; 
+    margin-bottom: 30px; 
+    display: inline-block; 
+    transition: 0.3s ease;
+}
+.back-link:hover { 
+    color: #5a843f; 
+    transform: translateX(-5px); 
+}
+
+/* Контент та характеристики */
+.product-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 60px; }
+.prod-title { font-size: 36px; color: #3e4f5f; font-weight: bold; }
+.prod-subtitle { font-size: 28px; color: #72a550; font-weight: normal; margin: 5px 0; }
+.stars { color: #72a550; margin-bottom: 25px; letter-spacing: 2px; }
+
+.yield-promo { display: flex; align-items: center; gap: 15px; margin-bottom: 40px; }
+.yield-icon { height: 50px; }
+.yield-text { color: #cc3333; font-weight: bold; font-size: 20px; }
+
+.green-label { color: #72a550; font-size: 14px; border-bottom: 2px solid #72a550; width: fit-content; margin-bottom: 15px; }
+.columns-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.col-title { color: #72a550; border-bottom: 1px solid #72a550; margin: 15px 0 10px; font-size: 17px; }
+.list { list-style: none; font-size: 14px; }
+.list li { position: relative; padding-left: 15px; margin-bottom: 6px; }
+.list li::before { content: "•"; color: #72a550; position: absolute; left: 0; font-weight: bold; }
+
+/* Фото та Кнопка PDF */
+.image-shadow-wrapper {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25); 
+    border-radius: 8px; overflow: hidden; background: #fff;
+}
+.main-photo { width: 100%; display: block; }
+.btn-wrap { text-align: right; margin-top: 30px; }
+.pdf-button { 
+    display: inline-flex; align-items: center; gap: 10px; border: 2px solid #72a550; 
+    color: #72a550; padding: 10px 25px; border-radius: 30px; text-decoration: none; 
+    font-weight: bold; background: #fff; transition: 0.3s;
+}
+.pdf-button:hover { background: #72a550; color: #fff; }
+
+/* Футер та Соцмережі */
+.site-footer { position: relative; z-index: 110; }
+.footer-main { background-color: #37474f; padding: 30px 0; color: #fff; }
+.footer-flex { display: flex; justify-content: space-between; align-items: center; }
+.footer-links a { color: #fff; text-decoration: none; font-size: 11px; font-weight: bold; }
+.footer-socials { display: flex; gap: 12px; }
+.footer-socials a:hover { transform: scale(1.1); transition: 0.3s; }
+.green-icon { 
+    height: 32px; 
+    filter: invert(48%) sepia(79%) saturate(402%) hue-rotate(55deg) brightness(95%) contrast(88%); 
+}
+.footer-copy { background-color: #263238; color: #90a4ae; padding: 15px 0; text-align: center; font-size: 11px; }

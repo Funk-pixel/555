@@ -1,0 +1,123 @@
+/* 1. Загальні налаштування для всіх пристроїв менше 1024px */
+@media (max-width: 1024px) {
+    
+    /* Коригуємо контейнери, щоб вони не мали фіксованої ширини */
+    .container, 
+    .header-flex, 
+    .header__inner, 
+    .header-top {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap; /* Дозволяємо елементам перестрибувати на новий рядок */
+    }
+
+    /* Ховаємо всі види меню на всіх сторінках */
+    .main-nav, 
+    .nav, 
+    .navigation,
+    .nav-menu {
+        display: none; 
+        width: 100%;
+        flex-basis: 100%; /* Меню займає всю ширину під логотипом */
+        background-color: #ffffff;
+        order: 3; /* Ставимо меню в самий низ шапки */
+    }
+
+    /* Показуємо кнопку-бургер */
+    .mobile-menu-btn {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+        margin: 10px 0;
+        order: 2;
+    }
+
+    .mobile-menu-btn span {
+        display: block;
+        height: 3px;
+        width: 100%;
+        background-color: #4CAF50; /* Зелений колір бренду */
+        border-radius: 3px;
+    }
+
+    /* МАГІЯ: Показуємо меню, якщо чекбокс натиснутий */
+    #menu-toggle:checked ~ .main-nav,
+    #menu-toggle:checked ~ .nav,
+    #menu-toggle:checked ~ .navigation {
+        display: block !important;
+    }
+
+    /* Стилізація кнопок меню, щоб вони були великими і зручними для пальця */
+    .main-nav ul, 
+    .navigation ul {
+        flex-direction: column !important;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .main-nav ul li, 
+    .navigation ul li,
+    .nav a {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .main-nav ul li a, 
+    .navigation ul li a,
+    .nav a {
+        display: block;
+        padding: 15px 0;
+        font-size: 18px;
+        text-decoration: none;
+        color: #333;
+    }
+
+    /* Адаптація сітки (Activity на головній, товари на сторінці товарів) */
+    .activity-grid, 
+    .product-flex, 
+    .hybrid-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .card, 
+    .hybrid-item {
+        width: 100% !important;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    /* Адаптація зображень */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* 2. Налаштування для маленьких телефонів (iPhone 4/5) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px !important;
+    }
+    
+    .search-box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* 3. Приховуємо бургер на десктопі */
+@media (min-width: 1025px) {
+    .mobile-menu-btn {
+        display: none !important;
+    }
+}
